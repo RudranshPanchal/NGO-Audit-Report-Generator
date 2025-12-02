@@ -1,0 +1,55 @@
+
+```
+NGO Report generator
+├─ 📁Backend
+│  ├─ 📁controllers
+│  │  └─ 📄reportController.js
+│  ├─ 📁node_modules
+│  ├─ 📁pdf
+│  │  ├─ 📁assets
+│  │  │  └─ 📄caLogo.png
+│  │  ├─ 📄multerConfig.js
+│  │  ├─ 📄parseReport.js
+│  │  ├─ 📄pdfController.js
+│  │  ├─ 📄pdfGenerator.js
+│  │  └─ 📄pdfTemplate.html
+│  ├─ 📁routes
+│  │  ├─ 📄pdfRoute.js
+│  │  └─ 📄reportRoute.js
+│  ├─ 📁utils
+│  │  └─ 📄helper.js
+│  ├─ 📄.env
+│  ├─ 📄package-lock.json
+│  ├─ 📄package.json
+│  └─ 📄server.js
+├─ 📁Frontend
+│  ├─ 📁node_modules
+│  ├─ 📁public
+│  │  └─ 📄vite.svg
+│  ├─ 📁src
+│  │  ├─ 📁assets
+│  │  │  └─ 📄react.svg
+│  │  ├─ 📁components
+│  │  │  ├─ 📄FakeDataFiller.jsx
+│  │  │  ├─ 📄Loader.jsx
+│  │  │  ├─ 📄ReportForm.jsx
+│  │  │  └─ 📄ReportFormOLD.jsx
+│  │  ├─ 📁pages
+│  │  │  └─ 📄GenerateReport.jsx
+│  │  ├─ 📁utils
+│  │  │  └─ 📄pdfGenerator.js
+│  │  ├─ 📄App.css
+│  │  ├─ 📄App.jsx
+│  │  ├─ 📄index.css
+│  │  ├─ 📄main.jsx
+│  │  └─ 📄report-pdf.css
+│  ├─ 📄.gitignore
+│  ├─ 📄eslint.config.js
+│  ├─ 📄index.html
+│  ├─ 📄package-lock.json
+│  ├─ 📄package.json
+│  ├─ 📄README.md
+│  └─ 📄vite.config.js
+├─ 📄.gitignore
+└─ 📄README.md
+```

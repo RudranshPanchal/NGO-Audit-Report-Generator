@@ -1,0 +1,4 @@
+# Node.js (Backend)
+node_modules/
+.env
+uploads/
