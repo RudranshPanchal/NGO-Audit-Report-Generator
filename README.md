@@ -45,7 +45,7 @@ markdown
 Copy code
 
 ## Contributors
-- Your Name
+- ✒️ Rudransh Panchal
 
 ```
 
