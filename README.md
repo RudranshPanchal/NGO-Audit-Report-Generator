@@ -3,21 +3,23 @@
 NGO Report generator
 ├─ 📁Backend
 │  ├─ 📁controllers
+│  │  ├─ 📄pdfController.js
 │  │  └─ 📄reportController.js
 │  ├─ 📁node_modules
 │  ├─ 📁pdf
+│  ├─ 📁routes
+│  │  ├─ 📄pdf.routes.js
+│  │  └─ 📄report.routes.js
+│  ├─ 📁services
+│  │  ├─ 📄pdf.service.js
+│  │  └─ 📄report.service.js
+│  ├─ 📁templates
 │  │  ├─ 📁assets
 │  │  │  └─ 📄caLogo.png
-│  │  ├─ 📄multerConfig.js
-│  │  ├─ 📄parseReport.js
-│  │  ├─ 📄pdfController.js
-│  │  ├─ 📄pdfGenerator.js
 │  │  └─ 📄pdfTemplate.html
-│  ├─ 📁routes
-│  │  ├─ 📄pdfRoute.js
-│  │  └─ 📄reportRoute.js
 │  ├─ 📁utils
-│  │  └─ 📄helper.js
+│  │  ├─ 📄helper.js
+│  │  └─ 📄multerConfig.js
 │  ├─ 📄.gitignore
 │  ├─ 📄package-lock.json
 │  ├─ 📄package.json
@@ -37,6 +39,8 @@ NGO Report generator
 │  │  │     ├─ 📄StepFinancials.jsx
 │  │  │     ├─ 📄StepNGOBasics.jsx
 │  │  │     └─ 📄StepSignatures.jsx
+│  │  ├─ 📁config
+│  │  │  └─ 📄api.js
 │  │  ├─ 📄App.css
 │  │  ├─ 📄App.jsx
 │  │  ├─ 📄index.css

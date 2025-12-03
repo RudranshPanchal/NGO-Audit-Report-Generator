@@ -41,117 +41,136 @@ const ReportForm = ({ onGenerateReport, loading, isReportReady, downloadPDF }) =
   const [completedSteps, setCompletedSteps] = useState([]);
   const [errors, setErrors] = useState({});
 
-  // const [formData, setFormData] = useState({
-
-  //   // STEP 0 — NGO BASICS
-  //   ngoName: "",
-  //   registrationNumber: "",
-  //   panNumber: "",
-  //   address: "",
-  //   taxExemption12A: "",
-  //   taxExemption80G: "",
-  //   contactPerson: "",
-  //   contactEmail: "",
-  //   contactPhone: "",
-  //   financialYear: "",
-  //   financialYearStart: "",
-  //   financialYearEnd: "",
-  //   dateOfReport: "",
-
-  //   // STEP 2 — ACTIVITIES
-  //   projectHighlights: "",
-
-
-  //   // STEP 1 — FINANCIALS
-  //   totalIncome: "",
-  //   totalExpenditure: "",
-  //   surplusDeficit: "",
-  //   sourcesOfFunds: "",
-  //   areasOfExpenditure: "",
-  //   foreigncontribution: "",
-  //   bankBalance: "",
-  //   numberOfBeneficiaries: "",
-
-
-  //   // STEP 3 — AUDITOR DETAILS
-  //   auditorName: "",
-  //   membershipNumber: "",
-  //   udin: "",
-  //   auditRemarks: "",
-  //   boardChairName: "",
-  //   secretaryName: "",
-
-  //   // STEP 4 — SIGNATURES
-  //   presidentSignature: "",
-  //   auditorSignature: "",
-  //   presidentName: "",
-  //   presidentDate: "",
-  //   auditorDate: "",
-
-  //   // COMPLIANCE CHECKBOXES
-  //   booksMaintained: false,
-  //   returnsFiled: false,
-  //   noViolation: false,
-  //   fcraCompliance: false,
-  // });
-
   const [formData, setFormData] = useState({
 
     // STEP 0 — NGO BASICS
-    ngoName: "Seva Jyoti Foundation",
-    registrationNumber: "NGO/MAH/2020/45219",
-    panNumber: "AACTS1234K",
-    address: "Plot 12, Shanti Nagar, Andheri East, Mumbai, Maharashtra - 400059",
-    taxExemption12A: "AAA12A1234Q",
-    taxExemption80G: "AAA80G5678Z",
-    contactPerson: "Radhika Verma",
-    contactEmail: "contact@sevajyoti.org",
-    contactPhone: "+91-9876543210",
-    financialYear: "2024-2025",
-    financialYearStart: "01-04-2024",
-    financialYearEnd: "31-03-2025",
-    dateOfReport: "30-06-2025",
+    ngoName: "",
+    registrationNumber: "",
+    panNumber: "",
+    address: "",
+    taxExemption12A: "",
+    taxExemption80G: "",
+    contactPerson: "",
+    contactEmail: "",
+    contactPhone: "",
+    financialYear: "",
+    financialYearStart: "",
+    financialYearEnd: "",
+    dateOfReport: "",
 
     // STEP 2 — ACTIVITIES
-    projectHighlights:
-      "Implemented community health camps, provided scholarships to underprivileged students, expanded clean water initiatives in 18 rural villages, and conducted livelihood training for 420 women.",
+    projectHighlights: "",
+
 
     // STEP 1 — FINANCIALS
-    totalIncome: "₹1,84,50,000",
-    totalExpenditure: "₹1,72,30,000",
-    surplusDeficit: "₹12,20,000 Surplus",
-    sourcesOfFunds:
-      "Individual Donations: 45%, Corporate CSR: 35%, Grants: 15%, Other: 5%",
-    areasOfExpenditure:
-      "Education Programs: 40%, Health Initiatives: 30%, Admin & Operations: 15%, Rural Development: 15%",
-    foreigncontribution: "₹28,40,000",
-    bankBalance: "₹36,75,000",
-    numberOfBeneficiaries: "12,450",
+    totalIncome: "",
+    totalExpenditure: "",
+    surplusDeficit: "",
+    sourcesOfFunds: "",
+    areasOfExpenditure: "",
+    foreigncontribution: "",
+    bankBalance: "",
+    numberOfBeneficiaries: "",
+
 
     // STEP 3 — AUDITOR DETAILS
-    auditorName: "Vikrant Shah",
-    firmName: "BlackOak Consultants",
-    firmAddress: "102, Sector- ED, Nirvan Empire, Indore-452016, Madhya Pradesh",
-    membershipNumber: "MNO251478",
-    udin: "UDIN 25XYZ458612",
-    auditRemarks:
-      "The financial statements give a true and fair view of the NGO’s financial position. No material discrepancies were noted.",
-    boardChairName: "Arun Patil",
-    secretaryName: "Meera Sharma",
+    auditorName: "",
+    membershipNumber: "",
+    udin: "",
+    auditRemarks: "",
+    boardChairName: "",
+    secretaryName: "",
 
     // STEP 4 — SIGNATURES
     presidentSignature: "",
     auditorSignature: "",
-    presidentName: "Arun Patil",
-    presidentDate: "30-06-2025",
-    auditorDate: "28-06-2025",
+    presidentName: "",
+    presidentDate: "",
+    auditorDate: "",
 
     // COMPLIANCE CHECKBOXES
-    booksMaintained: true,
-    returnsFiled: true,
-    noViolation: true,
-    fcraCompliance: true,
+    booksMaintained: false,
+    returnsFiled: false,
+    noViolation: false,
+    fcraCompliance: false,
   });
+
+  // ----DUMMY DATA FOR TESTING PUPOSE ---//
+
+//   const [formData, setFormData] = useState({
+
+//     // STEP 0 — NGO BASICS
+//     ngoName: "Seva Jyoti Foundation",
+//     registrationNumber: "NGO/MAH/2020/45219",
+//     panNumber: "AACTS1234K",
+//     address: "Plot 12, Shanti Nagar, Andheri East, Mumbai, Maharashtra - 400059",
+//     taxExemption12A: "AAA12A1234Q",
+//     taxExemption80G: "AAA80G5678Z",
+//     contactPerson: "Radhika Verma",
+//     contactEmail: "contact@sevajyoti.org",
+//     contactPhone: "+91-9876543210",
+//     financialYear: "2024-2025",
+//     financialYearStart: "01-04-2024",
+//     financialYearEnd: "31-03-2025",
+//     dateOfReport: "30-06-2025",
+
+//     // STEP 2 — ACTIVITIES
+//     projectHighlights:
+//       "Implemented community health camps, provided scholarships to underprivileged students, expanded clean water initiatives in 18 rural villages, and conducted livelihood training for 420 women.",
+
+//     // STEP 1 — FINANCIALS
+//     projectHighlights:
+//   "Throughout FY 2024–25, Seva Jyoti Foundation implemented multi-dimensional development programs with significant financial deployment. A total of 32 community health camps were organised with an expenditure of ₹1,08,75,600 covering diagnostics (₹32,40,800), doctor consultations (₹18,20,000), medicines (₹27,15,600), camp logistics (₹14,50,200), and medical equipment rentals (₹16,48,000). The scholarship program accounted for ₹72,40,000, supporting 720 students with tuition fees (₹41,80,000), digital learning devices (₹12,60,000), study material kits (₹8,20,000), transportation stipends (₹6,35,000), and exam coaching support (₹3,45,000).\n\nThe clean water initiative utilised ₹1,03,20,500, which included installation of 36 solar-powered filtration systems (₹72,90,000), repairing 10 borewells (₹9,40,500), laying 3,200 meters of pipelines (₹12,80,000), constructing 5 rainwater harvesting tanks (₹5,95,000), and community water testing (₹2,15,000). The livelihood training program involved ₹28,75,200 in expenses, consisting of tailoring machines & kits (₹9,84,800), trainer fees (₹7,40,000), training hall rentals (₹3,28,000), digital literacy labs (₹5,10,000), and micro-business seed funding (₹3,12,400). These combined initiatives supported 12,450 direct beneficiaries.",
+
+// totalIncome:
+//   "₹1,84,50,000 – comprising:\n• Individual Donations: ₹83,02,500\n• Corporate CSR Funding: ₹64,57,500\n• Domestic Grants: ₹27,67,500\n• Interest & Miscellaneous Income: ₹9,22,500\nThe income includes restricted project grants for health (₹58,00,000), education (₹38,50,000), and water programs (₹49,00,000), as well as unrestricted operational support (₹39,00,000).",
+
+// totalExpenditure:
+//   "₹1,72,30,000 – allocated across:\n• Program Activities: ₹1,52,05,300\n• Administrative & Operational Expenses: ₹20,24,700\nProgram expenditures include medical service contracts (₹28,60,400), procurement of filtration units (₹72,90,000), scholarship disbursals (₹41,80,000), livelihood training materials (₹9,84,800), vehicle & field logistics (₹6,55,100), and community mobilisation (₹4,35,000).",
+
+// surplusDeficit:
+//   "₹12,20,000 Surplus – generated due to unspent operational allocations (₹4,80,000), cost optimisation in procurement (₹3,95,000), lower administrative overheads (₹2,35,000), and interest income (₹1,10,000). The surplus will be carried forward for upcoming health and water initiatives.",
+
+// sourcesOfFunds:
+//   "Individual Donations: 45% (₹83,02,500) – including small donations (₹12,80,000), digital fundraising (₹9,25,500), major donors (₹60,97,000).\nCorporate CSR: 35% (₹64,57,500) – from 11 companies; largest grant ₹14,00,000, smallest ₹2,10,000.\nGrants: 15% (₹27,67,500) – from 3 institutions providing ₹12,00,000, ₹9,50,000, and ₹6,17,500 respectively.\nOther Income: 5% (₹9,22,500) – interest earnings (₹3,10,200), community contributions (₹1,95,500), event sponsorship (₹4,16,800).",
+
+// areasOfExpenditure:
+//   "Education Programs: 40% (₹68,92,000) – including:\n  • Tuition support: ₹41,80,000\n  • Books & learning kits: ₹8,20,000\n  • Digital tablets/laptops: ₹12,60,000\n  • Mentorship workshops: ₹3,75,000\n  • Student counselling services: ₹2,57,000\n\nHealth Initiatives: 30% (₹51,69,000) – including:\n  • Medicines & supplies: ₹27,15,600\n  • Doctor & paramedic fees: ₹18,20,000\n  • Diagnostics: ₹6,33,400\n\nAdmin & Operations: 15% (₹25,84,500) – covering:\n  • Salaries: ₹14,80,000\n  • Office rent & utilities: ₹5,95,000\n  • Audit & compliance: ₹2,25,500\n  • Communication & travel: ₹2,84,000\n\nRural Development: 15% (₹25,84,500) – including:\n  • Water filtration systems: ₹72,90,000 (allocated across multi-year plan)\n  • Borewell repairs: ₹9,40,500\n  • Rainwater harvesting: ₹5,95,000\n  • Community training: ₹2,15,000",
+
+// foreigncontribution:
+//   "₹28,40,000 – received from 4 foreign donors:\n• USA Donor Foundation: ₹12,00,000\n• UK Global Aid Trust: ₹7,80,000\n• German Relief Fund: ₹5,20,000\n• Canadian Social Impact Group: ₹3,40,000\nUtilised for:\n• Health equipment procurement: ₹10,40,000\n• Water purification projects: ₹12,80,000\n• Livelihood women training: ₹5,20,000\nAll transactions reconciled with FCRA bank statements.",
+
+// bankBalance:
+//   "₹36,75,000 – consisting of:\n• Operational Account Balance: ₹14,22,400\n• Project-Restricted Funds: ₹9,85,600\n• FCRA Account Balance: ₹7,40,500\n• Fixed Reserve for 2025–26: ₹5,26,500",
+
+// numberOfBeneficiaries:
+//   "12,450 beneficiaries – including:\n• Health: 8,450\n• Education/Scholarships: 720\n• Livelihood Training: 420\n• Water Purification Access: 12,000+ community members (direct + indirect) – counted as 2,860 unique program beneficiaries for reporting standards.",
+
+
+//     // STEP 3 — AUDITOR DETAILS
+//     auditorName: "Vikrant Shah",
+//     firmName: "BlackOak Consultants",
+//     firmAddress: "102, Sector- ED, Nirvan Empire, Indore-452016, Madhya Pradesh",
+//     membershipNumber: "MNO251478",
+//     udin: "UDIN 25XYZ458612",
+//     auditRemarks:
+//       "The financial audit confirms accurate fund utilisation with diverse and well-distributed expenditures including program-specific disbursals exceeding ₹1.52 crore. Item-wise verification of 1,480 vouchers, 92 bank transactions, 43 procurement records, and 37 utilisation reports showed full compliance with accounting standards and donor reporting requirements. No financial irregularities or fund misallocations were detected, and foreign contribution utilisation matched statutory norms.",
+//     boardChairName: "Arun Patil",
+//     secretaryName: "Meera Sharma",
+
+//     // STEP 4 — SIGNATURES
+//     presidentSignature: "",
+//     auditorSignature: "",
+//     presidentName: "Arun Patil",
+//     presidentDate: "30-06-2025",
+//     auditorDate: "28-06-2025",
+
+//     // COMPLIANCE CHECKBOXES
+//     booksMaintained: true,
+//     returnsFiled: true,
+//     noViolation: true,
+//     fcraCompliance: true,
+//   });
 
 
   useEffect(() => {

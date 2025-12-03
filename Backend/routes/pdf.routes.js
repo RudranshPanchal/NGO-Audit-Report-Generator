@@ -1,5 +1,5 @@
 import express from "express";
-import { createAuditPDF } from "../pdf/pdfController.js";
+import { createAuditPDF } from "../controllers/pdfController.js";
 import multer from "multer";
 
 const router = express.Router();

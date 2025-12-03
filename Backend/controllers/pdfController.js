@@ -1,6 +1,7 @@
 import path from "path";
-import { generatePDFBuffer } from "./pdfGenerator.js";
+import { generatePDFBuffer } from "../services/pdf.service.js";
 import { toBase64File, bufferToBase64 } from "../utils/helper.js";
+import { fileURLToPath } from "url";
 
 export const createAuditPDF = async (req, res) => {
     try {
@@ -25,7 +26,10 @@ export const createAuditPDF = async (req, res) => {
         }
 
         // Load CA logo (once)
-        const logoPath = path.resolve("pdf/assets/caLogo.png");
+        const __filename = fileURLToPath(import.meta.url);
+        const __dirname = path.dirname(__filename);
+
+        const logoPath = path.resolve(__dirname, "../templates/assets/caLogo.png");
         // const logoBuffer = fs.readFileSync(logoPath);
         // const caLogoBase64 = `data:image/png;base64,${logoBuffer.toString("base64")}`;
         const caLogoBase64 = toBase64File(logoPath);
