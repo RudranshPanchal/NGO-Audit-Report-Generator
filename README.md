@@ -67,7 +67,7 @@ NGO Report generator
 │  │  └─ 📄reportRoute.js
 │  ├─ 📁utils
 │  │  └─ 📄helper.js
-│  ├─ 📄.env
+│  ├─ 📄.gitignore
 │  ├─ 📄package-lock.json
 │  ├─ 📄package.json
 │  └─ 📄server.js
@@ -79,19 +79,17 @@ NGO Report generator
 │  │  ├─ 📁assets
 │  │  │  └─ 📄react.svg
 │  │  ├─ 📁components
-│  │  │  ├─ 📄FakeDataFiller.jsx
-│  │  │  ├─ 📄Loader.jsx
-│  │  │  ├─ 📄ReportForm.jsx
-│  │  │  └─ 📄ReportFormOLD.jsx
-│  │  ├─ 📁pages
-│  │  │  └─ 📄GenerateReport.jsx
-│  │  ├─ 📁utils
-│  │  │  └─ 📄pdfGenerator.js
+│  │  │  └─ 📁ReportForm
+│  │  │     ├─ 📄ReportForm.jsx
+│  │  │     ├─ 📄StepActivities.jsx
+│  │  │     ├─ 📄StepAuditorDetails.jsx
+│  │  │     ├─ 📄StepFinancials.jsx
+│  │  │     ├─ 📄StepNGOBasics.jsx
+│  │  │     └─ 📄StepSignatures.jsx
 │  │  ├─ 📄App.css
 │  │  ├─ 📄App.jsx
 │  │  ├─ 📄index.css
-│  │  ├─ 📄main.jsx
-│  │  └─ 📄report-pdf.css
+│  │  └─ 📄main.jsx
 │  ├─ 📄.gitignore
 │  ├─ 📄eslint.config.js
 │  ├─ 📄index.html
