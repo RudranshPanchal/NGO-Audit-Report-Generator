@@ -1,10 +1,14 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 import handlebars from "handlebars";
 import puppeteer from "puppeteer";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 export const generatePDFBuffer = async (data) => {
-  const templatePath = path.resolve("pdf/pdfTemplate.html");
+  const templatePath = path.join(__dirname, "../templates/pdfTemplate.html");
   const html = fs.readFileSync(templatePath, "utf8");
 
   const template = handlebars.compile(html);

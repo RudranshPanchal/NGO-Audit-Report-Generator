@@ -28,10 +28,15 @@ MANDATORY SECTIONS:
 11. Compliance Review  
 12. Key Observations  
 13. Recommendations  
-14. Annexures
 
 REMEMBER:
 - Do NOT invent ANY data.
+- Add a clear separator (e.g., a page break or horizontal line) between sections when switching to a new section.
+- Do NOT add anything after the Recommendations section (i.e., Recommendations is the last section).
+- Do NOT include signature lines
+- Do NOT include "President Signature", "Auditor Signature" or "Seal" section
+- Do NOT create placeholder signature text like “(Space for Signature)”
+(SIGNATURES WILL BE HANDLED SEPARATELY BY TEMPLATE)
 - If something is missing, write “Not Provided”.
 - All tables MUST be clean Markdown tables.
 - Tone must match professional CA statutory audit style.

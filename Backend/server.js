@@ -2,14 +2,13 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import reportRoute from "./routes/reportRoute.js";
-import pdfRoute from "./routes/pdfRoute.js";
+import reportRoute from "./routes/report.routes.js";
+import pdfRoute from "./routes/pdf.routes.js";
 
 dotenv.config();
 const app = express();
 app.use(cors());
 
-// ⬇️ Add these BEFORE routes
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
